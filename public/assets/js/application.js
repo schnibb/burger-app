@@ -3,7 +3,7 @@ $(document).ready(function() {
     $(document).on("click", "button.devour", devourBurger);
 
     $("#submit").on("click", function(event) {
-        event.preventDefault();
+        //event.preventDefault();
         createBurger();
     });
 
