@@ -3,9 +3,7 @@ $(document).ready(function() {
     $(document).on("click", "button.devour", devourBurger);
 
     $("#submit").on("click", function(event) {
-
         event.preventDefault();
-
         createBurger();
     });
 
@@ -19,7 +17,6 @@ $(document).ready(function() {
         $.post("/burgers/create", newBurger)
             .then(getBurgers());
         $("#burger_name").val("");
-        showBurgers();
     }
 
     function getBurgers() {
