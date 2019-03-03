@@ -19,6 +19,7 @@ $(document).ready(function() {
         $.post("/burgers/create", newBurger)
             .then(getBurgers());
         $("#burger_name").val("");
+        showBurgers();
     }
 
     function getBurgers() {
@@ -59,7 +60,7 @@ $(document).ready(function() {
             method: "PUT",
             url: "/burgers/update",
             data: eatBurger
-        }).then(getBurgers());
+        }).then(showBurgers());
     }
 
     function toBeEaten(burger) {
