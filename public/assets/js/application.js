@@ -3,7 +3,7 @@ $(document).ready(function() {
     $(document).on("click", "button.devour", devourBurger);
 
     $("#submit").on("click", function(event) {
-        //event.preventDefault();
+        event.preventDefault();
         createBurger();
     });
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     function devourBurger(event) {
         console.log("devour burger called");
-        //event.preventDefault();
+        event.preventDefault();
         var burgerID = event.target.value;
         console.log(burgerID);
         var eatBurger = {
